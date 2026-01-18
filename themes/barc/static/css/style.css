@@ -432,6 +432,10 @@ p {
   align-items: center;
   justify-content: center;
   background-color: var(--color-secondary);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -1388,6 +1392,10 @@ p {
 .events {
   padding: var(--space-4xl) 0;
   background-color: var(--color-background-light);
+  background-image: linear-gradient(rgba(240, 245, 250, 0.92), rgba(240, 245, 250, 0.92)), url('/images/events-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .events-grid {
