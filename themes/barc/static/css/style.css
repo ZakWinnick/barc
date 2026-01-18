@@ -1610,7 +1610,7 @@ p {
 /* Newsletter Section */
 .newsletter {
   padding: var(--space-4xl) 0;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   text-align: center;
 }
 
