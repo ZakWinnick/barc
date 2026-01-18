@@ -434,7 +434,7 @@ p {
   background-color: var(--color-secondary);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero.jpeg');
   background-size: cover;
-  background-position: center top;
+  background-position: center 20%;
   background-repeat: no-repeat;
   overflow: hidden;
 }
