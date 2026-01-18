@@ -103,18 +103,9 @@
 <!-- Newsletter Signup Section -->
 <section class="newsletter" id="newsletter">
     <div class="container">
-        <h2 class="section-title">Stay Connected</h2>
-        <p class="section-subtitle">Subscribe to our newsletter for the latest events, news, and community updates</p>
-
-        <form class="newsletter-form" action="https://newsletter.bayarearivianclub.com/#/portal/signup" method="GET">
-            <div class="form-group">
-                <label for="email" class="visually-hidden">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </div>
-        </form>
-
-        <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
+        <div class="ghost-signup-container" style="height: 40vmin;min-height: 360px">
+            <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#08090c" data-text-color="#FFFFFF" data-button-color="#2e3d1a" data-button-text-color="#FFFFFF" data-title="The BARCing Lot" data-description="What's happening, what happened, and what went off-road with the Bay Area Rivian Club" data-icon="https://newsletter.bayarearivianclub.com/content/images/size/w192h192/size/w256h256/2025/07/RivianClubs_Logo_Bay_Area_Primary_ForestGreen-Circle.png" data-site="https://newsletter.bayarearivianclub.com/" data-locale="en" async></script>
+        </div>
     </div>
 </section>
 {{ end }}
