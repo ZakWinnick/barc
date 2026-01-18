@@ -1439,6 +1439,11 @@ p {
   color: var(--color-text-light);
 }
 
+.heylo-events-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 /* Membership Section */
 .membership {
   padding: var(--space-4xl) 0;

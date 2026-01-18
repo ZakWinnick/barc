@@ -13,26 +13,13 @@
         <h2 class="section-title">Events</h2>
         <p class="section-subtitle">From Rivians &amp; Refreshments to coastal trail cleanups and off-road escapes into NorCal's backcountry</p>
 
-        <div class="events-grid">
-            {{ $events := where .Site.RegularPages "Section" "events" }}
-            {{ if $events }}
-                {{ range first 3 $events }}
-                <article class="event-card">
-                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                    {{ with .Params.date }}
-                    <time datetime="{{ . }}">{{ dateFormat "January 2, 2006" . }}</time>
-                    {{ end }}
-                    {{ with .Params.location }}
-                    <p class="event-location">{{ . }}</p>
-                    {{ end }}
-                    <p>{{ .Summary }}</p>
-                </article>
-                {{ end }}
-            {{ else }}
-            <div class="events-placeholder">
-                <p>Exciting events coming soon! Check back for upcoming drives, meetups, and adventures.</p>
+        <div class="heylo-events-container">
+            <div
+                id="heylo-event-feed"
+                data-api-key="adadf1ca-9cc8-4454-964d-38f122804017"
+                data-community-id="9fd981f2-8a41-45d2-bf85-d98374ec28cd">
             </div>
-            {{ end }}
+            <script src="https://www.heylo.com/embedded-events.min.js"></script>
         </div>
     </div>
 </section>
