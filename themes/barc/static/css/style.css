@@ -1568,6 +1568,22 @@ p {
   color: var(--color-primary);
 }
 
+.about-motto {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-primary);
+  margin-top: var(--space-xl);
+}
+
+.about-signature {
+  font-family: monospace;
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+}
+
 /* Motto Section */
 .motto {
   padding: var(--space-4xl) 0;
