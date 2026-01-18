@@ -1352,6 +1352,13 @@ p {
   text-align: center;
 }
 
+.hero-logo {
+  display: block;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto var(--space-xl);
+}
+
 .hero-title {
   font-size: var(--text-5xl);
   font-weight: 800;
