@@ -1,0 +1,95 @@
+# Hugo Configuration for Bay Area Rivian Club
+# https://gohugo.io/getting-started/configuration/
+
+baseURL = "https://bayarea.rivianclubs.org/"
+languageCode = "en-us"
+title = "Bay Area Rivian Club"
+theme = "barc"
+
+# Build settings
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+
+# Performance and modern features
+summarylength = 70
+
+# Minify output
+[minify]
+  minifyOutput = true
+
+# Pagination
+[pagination]
+  pagerSize = 10
+
+# Permalink structure
+[permalinks]
+  posts = "/:year/:month/:slug/"
+  events = "/events/:slug/"
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Events"
+    url = "/events/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+# Site parameters
+[params]
+  tagline = "An Official Chapter of Rivian Clubs of America"
+  description = "From Rivians & Refreshments to coastal trail cleanups and off-road escapes into NorCal's backcountry"
+
+  # Brand colors
+  primaryColor = "#1e3708"
+
+  # Social media links
+  [params.social]
+    twitter = "bayarearivians"
+    instagram = "bayarearivianclub"
+
+# Taxonomy settings
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+# Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+    style = "monokai"
+
+# Security settings
+[security]
+  [security.funcs]
+    getenv = ["^HUGO_", "^CI$"]
+
+# Sitemap settings
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"

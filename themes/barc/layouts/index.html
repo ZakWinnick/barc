@@ -1,0 +1,133 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title">Bay Area Rivian Club</h1>
+        <p class="hero-tagline">{{ .Site.Params.tagline | default "An Official Chapter of Rivian Clubs of America" }}</p>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section class="events" id="events">
+    <div class="container">
+        <h2 class="section-title">Events</h2>
+        <p class="section-subtitle">From Rivians &amp; Refreshments to coastal trail cleanups and off-road escapes into NorCal's backcountry</p>
+
+        <div class="events-grid">
+            {{ $events := where .Site.RegularPages "Section" "events" }}
+            {{ if $events }}
+                {{ range first 3 $events }}
+                <article class="event-card">
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    {{ with .Params.date }}
+                    <time datetime="{{ . }}">{{ dateFormat "January 2, 2006" . }}</time>
+                    {{ end }}
+                    {{ with .Params.location }}
+                    <p class="event-location">{{ . }}</p>
+                    {{ end }}
+                    <p>{{ .Summary }}</p>
+                </article>
+                {{ end }}
+            {{ else }}
+            <div class="events-placeholder">
+                <p>Exciting events coming soon! Check back for upcoming drives, meetups, and adventures.</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Membership Section -->
+<section class="membership" id="membership">
+    <div class="container">
+        <h2 class="section-title">Membership</h2>
+        <p class="section-subtitle">Join our community of Rivian adventurers</p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                    </svg>
+                </div>
+                <h3>Exclusive Experiences</h3>
+                <p>Access members-only events, group drives, and special gatherings throughout the Bay Area.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="5" x2="5" y2="19"></line>
+                        <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                        <circle cx="17.5" cy="17.5" r="2.5"></circle>
+                    </svg>
+                </div>
+                <h3>Discounted Entry</h3>
+                <p>Enjoy discounted entry to national and regional Rivian Clubs of America events.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+                <h3>Monthly Newsletter</h3>
+                <p>Stay informed with our monthly insider newsletter featuring news, tips, and upcoming events.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3>Tread Lightly! Membership</h3>
+                <p>Complimentary Tread Lightly! membership included, promoting responsible outdoor recreation.</p>
+            </div>
+        </div>
+
+        <div class="membership-cta">
+            <a href="https://www.heylo.com/groups/bay-area-rivian-club" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join via Heylo</a>
+            <a href="https://rivianclubs.org" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Rivian Clubs of America</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>The Bay Area Rivian Club is a grassroots community formed by Rivian owners seeking shared exploration experiences. We're proud to be <strong>the very first chapter</strong> of Rivian Clubs of America, leading the way for regional communities nationwide.</p>
+            <p>Our mission is to foster connection among Rivian enthusiasts while promoting responsible recreation. Whether you're navigating the coastal highways, exploring NorCal's backcountry, or simply enjoying Rivians &amp; Refreshments with fellow owners, you'll find your community here.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Stay Adventurous Motto Section -->
+<section class="motto">
+    <div class="container">
+        <h2 class="motto-text">Stay Adventurous</h2>
+    </div>
+</section>
+
+<!-- Newsletter Signup Section -->
+<section class="newsletter" id="newsletter">
+    <div class="container">
+        <h2 class="section-title">Stay Connected</h2>
+        <p class="section-subtitle">Subscribe to our newsletter for the latest events, news, and community updates</p>
+
+        <form class="newsletter-form" action="https://newsletter.bayarearivianclub.com/#/portal/signup" method="GET">
+            <div class="form-group">
+                <label for="email" class="visually-hidden">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+
+        <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
+    </div>
+</section>
+{{ end }}
