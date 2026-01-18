@@ -432,7 +432,7 @@ p {
   align-items: center;
   justify-content: center;
   background-color: var(--color-secondary);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/hero.jpeg');
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
