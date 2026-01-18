@@ -1333,8 +1333,9 @@ p {
 }
 
 .site-logo .logo-img {
-  height: 50px;
+  height: 60px;
   width: auto;
+  display: block;
 }
 
 .site-nav {
@@ -1343,6 +1344,10 @@ p {
 }
 
 /* Hero Section - Template classes */
+.hero .container {
+  text-align: center;
+}
+
 .hero-title {
   font-size: var(--text-5xl);
   font-weight: 800;
