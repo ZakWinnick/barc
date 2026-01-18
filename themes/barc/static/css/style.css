@@ -1401,7 +1401,7 @@ p {
   background-color: var(--color-background-light);
   background-image: linear-gradient(rgba(240, 245, 250, 0.75), rgba(240, 245, 250, 0.75)), url('/images/events-bg.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 70%;
   background-repeat: no-repeat;
 }
 
