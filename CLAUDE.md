@@ -4,7 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Bay Area Rivian Club (BARC) website — a Hugo static site for the community club chapter. Live at https://bayarea.rivianclubs.org/
+Bay Area Rivian Club (BARC) website — a Hugo static site for the community club chapter.
+
+- **GitHub Pages site:** https://barc.winnick.cloud
+- **Production site:** https://bayarea.rivianclubs.org/
 
 ## Development Commands
 

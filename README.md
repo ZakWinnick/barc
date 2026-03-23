@@ -2,7 +2,8 @@
 
 The official website for the Bay Area Rivian Club (BARC), the first chapter of [Rivian Clubs of America](https://rivianclubs.org). Built with [Hugo](https://gohugo.io/).
 
-**Live site:** [bayarea.rivianclubs.org](https://bayarea.rivianclubs.org/)
+**GitHub Pages site:** [barc.winnick.cloud](https://barc.winnick.cloud)
+**Production site:** [bayarea.rivianclubs.org](https://bayarea.rivianclubs.org/)
 
 ## Getting Started
 
